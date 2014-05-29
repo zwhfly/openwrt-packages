@@ -1,0 +1,15 @@
+--- a/attacher.c
++++ b/attacher.c
+@@ -997,7 +997,10 @@
+       if (i == 0)
+ 	Panic(0, "No screen session found.");
+       if (i != 1)
+-	Panic(0, "Use -S to specify a session.");
++      {
++        if (rflag < 3)
++	  Panic(0, "Use -S to specify a session.");
++      }
+     }
+   else
+     {
+
