@@ -1,0 +1,38 @@
+--- a/src/mentohust.conf
++++ b/src/mentohust.conf
+@@ -9,11 +9,12 @@
+ 
+ [MentoHUST]
+ ;用户名，长度不超过64
+-Username=
++Username=abc
++Password=123
+ ;密码(简单加密)
+ EncodePass=
+ ;网卡
+-Nic=
++Nic=eth0.2
+ ;静态IP用户可以使用非本机IP
+ IP=
+ ;掩码，无关紧要
+@@ -31,11 +32,11 @@
+ ;失败等待（秒）认证失败后等待RestartWait秒或者服务器请求后重启认证
+ RestartWait=
+ ;寻找服务器时的组播地址类型 0标准 1锐捷 2将MentoHUST用于赛尔认证
+-StartMode=
++StartMode=1
+ ;DHCP方式 0(不使用) 1(二次认证) 2(认证后) 3(认证前)
+-DhcpMode=
++DhcpMode=1
+ ;是否后台运行: 0(否) 1(是，关闭输出) 2(是，保留输出) 3(是，输出到文件/tmp/mentohust.log)
+-DaemonMode=
++DaemonMode=0
+ ;是否显示通知： 0(否) 1~20(是)
+ ShowNotify=
+ ;客户端版本号，如果未开启客户端校验但对版本号有要求，可以在此指定，形如3.30
+@@ -43,4 +44,4 @@
+ ;认证数据文件，如果需要校验客户端，就需要正确设置
+ DataFile=
+ ;进行DHCP的脚本
+-DhcpScript=
++DhcpScript=udhcpc -i eth0.2
