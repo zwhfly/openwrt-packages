@@ -12,7 +12,7 @@ PKG_VERSION:=0.3.1
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=http://mentohust.googlecode.com/files/
+PKG_SOURCE_URL:=https://github.com/zwhfly/mentohust_source_pack/raw/master/
 PKG_MD5SUM:=c7033ba8d8e75294924ed03f4b7b0c45
 
 PKG_INSTALL:=1
