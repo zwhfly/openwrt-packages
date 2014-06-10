@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gevent
-PKG_VERSION:=0.13.8
+PKG_VERSION:=1.0.1
 PKG_RELEASE:=1
 
 PKG_SOURCE:=gevent-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://pypi.python.org/packages/source/g/gevent/
-PKG_MD5SUM:=ca9dcaa7880762d8ebbc266b11252960
+PKG_MD5SUM:=7b952591d1a0174d6eb6ac47bd975ab6
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/gevent-$(PKG_VERSION)
 PKG_BUILD_DEPENDS:=python
@@ -23,11 +23,11 @@ $(call include_mk, python-package.mk)
 
 define Package/gevent
   SUBMENU:=Python
-  SECTION:=libs
-  CATEGORY:=Libraries
+  SECTION:=lang
+  CATEGORY:=Languages
   TITLE:=gevent
   URL:=http://www.gevent.org/
-  DEPENDS:=+python +python-greenlet +libevent2
+  DEPENDS:=+python +python-greenlet +libevent2 +librt
 endef
 
 define Package/gevent/description
